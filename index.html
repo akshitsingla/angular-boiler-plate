@@ -4,10 +4,25 @@
     <!-- Include the AngularJS library -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
   </head>
+  <!-- ng-app to define APPLICATION scope -->
   <body ng-app="myApp">
     
+    <!-- ng-controller to define CONTROLLER scope -->
     <div ng-controller="MainController">
       <h1> {{ title }} </h1>
+      
+      <!-- Using in-built filters -->
+      <h2>Filters</h2>
+      <ul> 
+        <!-- to display a number as currency -->
+        <li>Displaying Currency - {{ product.price | currency }}</l1>
+        
+        <!-- to display a Date object -->
+        <li> Displaying date - {{ product.pubdate | date }}</li>
+
+        <!-- to display text in uppercase -->
+        <li> Displaying date - {{ title | uppercase }}</li>
+      </ul>
     </div>
 
     <!-- Modules -->
