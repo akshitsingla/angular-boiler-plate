@@ -23,6 +23,18 @@
         <!-- to display text in uppercase -->
         <li> Displaying date - {{ title | uppercase }}</li>
       </ul>
+    
+      <!-- Using ng-repeat -->
+      <h2>ng-repeat</h2>
+      <h3>(Try clicking any fruit)</h3>
+      <ul ng-repeat="fruit in fruits">
+        <li ng-click="clickFn($index)">{{ $index }} : {{ fruit }}</li>
+      </ul>
+
+      <!-- Using ng-src -->
+      <h2>ng-src</h2>
+      <img ng-src="{{imageURL}}" />
+
     </div>
 
     <!-- Modules -->
